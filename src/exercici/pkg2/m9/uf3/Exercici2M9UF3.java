@@ -101,8 +101,7 @@ public class Exercici2M9UF3 {
                     = in.readLine();
             while (s != null) {
                 System.out.println(s);
-                s
-                        = in.readLine();
+                s = in.readLine();
             }
         } catch (Exception e) {
             System.out.println("Fallo");
