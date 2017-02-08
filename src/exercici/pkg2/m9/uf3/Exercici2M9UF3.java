@@ -12,26 +12,53 @@ public class Exercici2M9UF3 {
 
     public static void main(String[] args) throws MalformedURLException, IOException {
 
-        URL url = new URL("http:www.google.es");
+      /**
+       * EXERCICI 1
+       */
+      
+//        URL url = new URL("http:www.google.es");
+//
+//        System.out.println("Protocol: " + url.getProtocol());
+//
+//        System.out.println("Autoritat: " + url.getAuthority());
+//
+//        System.out.println("Host: " + url.getHost());
+//
+//        System.out.println("Port: " + url.getPort());
+//
+//        System.out.println("Path: " + url.getPath());
+//
+//        System.out.println("Query: " + url.getQuery());
+//
+//        System.out.println("Filename: " + url.getFile());
+//
+//        System.out.println("Ref: " + url.getRef());
+//
+//        llegirURL();
+//        
+//        comunicacioURL();
 
-        System.out.println("Protocol: " + url.getProtocol());
 
-        System.out.println("Autoritat: " + url.getAuthority());
 
-        System.out.println("Host: " + url.getHost());
+    /**
+    * EXERCICI 2
+    */
+    
+    
 
-        System.out.println("Port: " + url.getPort());
-
-        System.out.println("Path: " + url.getPath());
-
-        System.out.println("Query: " + url.getQuery());
-
-        System.out.println("Filename: " + url.getFile());
-
-        System.out.println("Ref: " + url.getRef());
-
-        llegirURL();
     }
+    
+    
+    
+    
+        /****************************************************************************************************************************
+         * ***************************************************************************************************************************
+         * ***************************************************************************************************************************
+         * ************************************ EXERCICI 1  **************************************************************************
+         * ***************************************************************************************************************************
+         * ***************************************************************************************************************************
+         * ***************************************************************************************************************************
+         */
 
     public static void llegirURL() throws IOException {
         try {
@@ -48,7 +75,7 @@ public class Exercici2M9UF3 {
         }
     }
 
-    public void comunicacioURL() throws MalformedURLException {
+    public static void comunicacioURL() throws MalformedURLException {
         Scanner lector = new Scanner(System.in);
         System.out.println("Introdueix la URL: ");
         String url = lector.next();
@@ -56,8 +83,7 @@ public class Exercici2M9UF3 {
         try {
             URL url2 = new URL(url);
 
-            URLConnection conexion
-                    = url2.openConnection();
+            URLConnection conexion = url2.openConnection();
             conexion.setDoOutput(true);
             conexion.connect();
             //Lectura i mostra de les capçaleres
@@ -83,4 +109,19 @@ public class Exercici2M9UF3 {
         }
     }
 
+    
+    
+    /****************************************************************************************************************************
+         * ***************************************************************************************************************************
+         * ***************************************************************************************************************************
+         * ************************************ EXERCICI 2  **************************************************************************
+         * ***************************************************************************************************************************
+         * ***************************************************************************************************************************
+         * ***************************************************************************************************************************
+         */
+    
+    
+    
+    
+    
 }
