@@ -18,36 +18,33 @@ public class Exercici2M9UF3 {
          * EXERCICI 1
          */
         URL url = new URL("http://www.elpais.es");
-//
-//        System.out.println("Protocol: " + url.getProtocol());
-//
-//        System.out.println("Autoritat: " + url.getAuthority());
-//
-//        System.out.println("Host: " + url.getHost());
-//
-//        System.out.println("Port: " + url.getPort());
-//
-//        System.out.println("Path: " + url.getPath());
-//
-//        System.out.println("Query: " + url.getQuery());
-//
-//        System.out.println("Filename: " + url.getFile());
-//
-//        System.out.println("Ref: " + url.getRef());
-//
-//        llegirURL();
-//        
-//        comunicacioURL();
+
+        System.out.println("Protocol: " + url.getProtocol());
+
+        System.out.println("Autoritat: " + url.getAuthority());
+
+        System.out.println("Host: " + url.getHost());
+
+        System.out.println("Port: " + url.getPort());
+
+        System.out.println("Path: " + url.getPath());
+
+        System.out.println("Query: " + url.getQuery());
+
+        System.out.println("Filename: " + url.getFile());
+
+        System.out.println("Ref: " + url.getRef());
+
+        llegirURL();
+        
+        comunicacioURL();
 
 
         /**
          * EXERCICI 2
          */
-        
-        
-        comunicacionsURL(url);
-        
-        imprimirPartesDeWeb(url, "head");
+                
+        imprimirPartesDeWeb(url, "<ul>");
     }
 
     /**
@@ -136,7 +133,7 @@ public class Exercici2M9UF3 {
         try {
             in = new BufferedReader(new InputStreamReader(url.openStream()));
             String inputLine;
-            while (((inputLine = in.readLine()) != null) && inputLine.contains(etiqueta)) {
+            while (((inputLine = in.readLine()) != null) || inputLine.contains(etiqueta)) {
                 System.out.println(inputLine);
 
             }
